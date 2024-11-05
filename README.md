@@ -47,7 +47,4 @@ This is a simple Python application for a fictional chocolate house that manages
    ```bash
    docker run -p 5000:5000 chocolate_app
    ```
-Also image available in docker hub
-```bash
- docker pull sru33/chocolate_app:latest
-```
+
