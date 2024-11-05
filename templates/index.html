@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate House</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Chocolate House</h1>
+    </header>
+    <main>
+        
+        <section>
+            <h2>Seasonal Flavors</h2>
+            <ul id="flavor-list"></ul>
+            <h3>Add New Flavor</h3>
+            <form id="flavor-form">
+                <input type="text" placeholder="Flavor Name" id="flavor-name" required>
+                <input type="text" placeholder="Season" id="flavor-season" required>
+                <button type="submit">Add Flavor</button>
+            </form>
+        </section>
+
+        
+        <section>
+            <h2>Ingredients</h2>
+            <ul id="ingredient-list"></ul>
+            <h3>Add New Ingredient</h3>
+            <form id="ingredient-form">
+                <input type="text" placeholder="Ingredient Name" id="ingredient-name" required>
+                <input type="number" placeholder="Quantity" id="ingredient-quantity" required>
+                <button type="submit">Add Ingredient</button>
+            </form>
+        </section>
+        
+        
+        <section>
+            <h2>Customer Suggestions</h2>
+            <form id="suggestion-form">
+                <input type="text" placeholder="Flavor Name" id="suggestion-flavor" required>
+                <textarea placeholder="Allergy Concerns" id="suggestion-allergy"></textarea>
+                <button type="submit">Submit Suggestion</button>
+            </form>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
