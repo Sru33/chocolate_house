@@ -17,7 +17,7 @@ This is a simple Python application for a fictional chocolate house that manages
 1. Clone the repository:
    ```bash
    git clone https://github.com/Sru33/chocolate_house.git
-   cd chocolate_house_app
+   cd chocolate_house
    ```
 
 2. Install the required packages:
