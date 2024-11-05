@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chocolate House</title>
+    
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
-        <h1>Welcome to the Chocolate House</h1>
-    </header>
-    <main>
         
+        <h1>Welcome to the Chocolate House 🍫</h1>
+    </header>
+    
+    <main>
         <section>
             <h2>Seasonal Flavors</h2>
             <ul id="flavor-list"></ul>
-            <h3>Add New Flavor</h3>
+            <h3>Add New Flavor➕</h3>
             <form id="flavor-form">
                 <input type="text" placeholder="Flavor Name" id="flavor-name" required>
                 <input type="text" placeholder="Season" id="flavor-season" required>
@@ -23,19 +25,17 @@
             </form>
         </section>
 
-        
         <section>
-            <h2>Ingredients</h2>
+            <h2>Available Ingredients</h2>
             <ul id="ingredient-list"></ul>
-            <h3>Add New Ingredient</h3>
+            <h3>Add New Ingredient➕</h3>
             <form id="ingredient-form">
                 <input type="text" placeholder="Ingredient Name" id="ingredient-name" required>
                 <input type="number" placeholder="Quantity" id="ingredient-quantity" required>
                 <button type="submit">Add Ingredient</button>
             </form>
         </section>
-        
-        
+
         <section>
             <h2>Customer Suggestions</h2>
             <form id="suggestion-form">
@@ -43,6 +43,24 @@
                 <textarea placeholder="Allergy Concerns" id="suggestion-allergy"></textarea>
                 <button type="submit">Submit Suggestion</button>
             </form>
+        </section>
+
+        <section>
+            <h2>View Seasonal Flavors</h2>
+            <button id="view-flavors">View Flavors</button>
+            <div id="flavor-output"></div>
+        </section>
+
+        <section>
+            <h2>View Ingredients</h2>
+            <button id="view-ingredients">View Ingredients</button>
+            <div id="ingredient-output"></div>
+        </section>
+
+        <section>
+            <h2>View Customer Suggestions</h2>
+            <button id="view-suggestions">View Suggestions</button>
+            <div id="suggestion-output"></div>
         </section>
     </main>
     <script src="{{ url_for('static', filename='script.js') }}"></script>

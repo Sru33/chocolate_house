@@ -87,6 +87,47 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    document.getElementById('view-flavors').addEventListener('click', function () {
+        fetch('/flavors')
+            .then(response => response.json())
+            .then(data => {
+                const flavorOutput = document.getElementById('flavor-output');
+                flavorOutput.innerHTML = '';
+                data.forEach(flavor => {
+                    const flavorItem = document.createElement('li');
+                    flavorItem.textContent = `${flavor.name} - ${flavor.season}`;
+                    flavorOutput.appendChild(flavorItem);
+                });
+            });
+    });
+    
+    document.getElementById('view-ingredients').addEventListener('click', function () {
+        fetch('/ingredients')
+            .then(response => response.json())
+            .then(data => {
+                const ingredientOutput = document.getElementById('ingredient-output');
+                ingredientOutput.innerHTML = '';
+                data.forEach(ingredient => {
+                    const ingredientItem = document.createElement('li');
+                    ingredientItem.textContent = `${ingredient.name} - Quantity: ${ingredient.quantity}`;
+                    ingredientOutput.appendChild(ingredientItem);
+                });
+            });
+    });
+    
+    document.getElementById('view-suggestions').addEventListener('click', function () {
+        fetch('/suggestions')
+            .then(response => response.json())
+            .then(data => {
+                const suggestionOutput = document.getElementById('suggestion-output');
+                suggestionOutput.innerHTML = '';
+                data.forEach(suggestion => {
+                    const suggestionItem = document.createElement('div');
+                    suggestionItem.textContent = `Flavor: ${suggestion.flavor_name}, Allergies: ${suggestion.allergy_concerns}`;
+                    suggestionOutput.appendChild(suggestionItem);
+                });
+            });
+    });
     
     document.getElementById('ingredient-form').addEventListener('submit', function (e) {
         e.preventDefault();
