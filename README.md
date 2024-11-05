@@ -40,10 +40,10 @@ This is a simple Python application for a fictional chocolate house that manages
 ## Docker Instructions
 1. Build the Docker image:
    ```bash
-   docker build -t chocolate_house_app .
+   docker build -t chocolate_app .
    ```
 
 2. Run the Docker container:
    ```bash
-   docker run -p 5000:5000 chocolate_house_app
+   docker run -p 5000:5000 chocolate_app
    ```
