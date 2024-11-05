@@ -132,4 +132,3 @@ Welcome to the Chocolate House
 
 ---
 
-Feel free to customize any part of the README to better match your project's details, and let me know if you need any further modifications or additional sections!
